@@ -23,10 +23,6 @@ class Claim(models.Model):
     class Meta:
         ordering = ['-timestamp']
 
-    #
-    # def image_tag(self):
-    #     return mark_safe('<img src="/directory/%s" width="150" height="150" />' % (self.image))
-
     def __str__(self):
         return f"CLAIM USER: {self.telegram}"
 
