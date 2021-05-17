@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+pandas = "*"
+django-jsonfield = "*"
+pillow = "*"
+requests = "*"
+coinpaprika-client = "*"
+ciso8601 = "*"
+django-model-utils = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"

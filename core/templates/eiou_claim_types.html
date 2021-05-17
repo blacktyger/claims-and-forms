@@ -1,0 +1,102 @@
+{% load static %}
+
+<style>
+    .accordion-item, .accordion-button {
+        background-color: rgba(255,255,255,0.3)!important;
+        border: none!important;
+        margin: 10px;
+}
+</style>
+
+<div class="accordion accordion  pb-3" id="accordionEIOU">
+
+    <!--    VITEX -->
+    <div class="accordion-item shadow">
+        <h2 class="accordion-header" id="headingVitex">
+            <button class="btn btn-primary py-2 w-100" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseVitex" aria-expanded="true" aria-controls="collapseVitex">
+                  <span class="fs-6">
+                      <i class="far fa-chart-bar"></i>
+                      Using Vitex After 12 March
+                  </span>
+            </button>
+        </h2>
+        <div id="collapseVitex" class="accordion-collapse collapse" aria-labelledby="headingVitex"
+             data-bs-parent="#accordionEIOU">
+            <div class="accordion-body fs-6 text-start">
+                 <p>
+                    Are your <strong>EPIC-001</strong> and <strong>EPIC-002</strong> balances different?
+                </p>
+                <p>
+                    EPIC-002 balance does not reflect any deposit to Vitex done after 12 March.
+                    The EPIC-002 token only reflects EPIC-001 balance BEFORE 12 March.
+                </p>
+                <p>
+                    Balances on your account are compared in order to calculate the EIOU value.
+                    Each case must be manually investigated to validate Mimblewimble transactions
+                    correlated to your account.
+                </p>
+                <p>
+                    Epic Cash coins purchased from the hacker account on
+                    Vitex after 12 March do not exist as these coins were
+                    produced illegitimately by the hacker.
+                    There is no option to claim the spoofed coins.
+                </p>
+                <p>
+                    The USD value calculation of trades after 12 March is
+                    based on the EPIC/BTC and BTC/USD price when executed.
+                    This calculation represents the loss to be compensated
+                    with EIOU tokens.
+                </p>
+                <ul class="mt-3">
+                    <li class="my-3">
+                        Coins created (by mining or hack) after 12 March are removed from circulation due to rollback
+                    </li>
+                    <li class="my-3">
+                        Coins bought or sold after 12 March are no longer in circulation due to the rollback
+                    </li>
+                    <li class="my-3">
+                        Coins created before 12 March and sent to Vitex account after 12 March were returned to the source wallet due to rollback
+                    </li>
+                    <li class="my-3">
+                        Telegram username and Vitex address is required to submit claim
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--    MINERS -->
+    <div class="accordion-item shadow">
+        <h2 class="accordion-header" id="headingMiners">
+            <button class="btn py-2 btn-primary w-100" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseMiners" aria-expanded="true" aria-controls="collapseMiners">
+                  <span class="fs-6">
+                      ⚒ Mining After 12 March
+                  </span>
+            </button>
+        </h2>
+        <div id="collapseMiners" class="accordion-collapse collapse" aria-labelledby="headingMiners"
+             data-bs-parent="#accordionEIOU">
+            <div class="accordion-body fs-6 text-start">
+                <p>
+                    Mining compensation requires evidence of losses incurred
+                    by the miner. Screenshots, receipts (rented mining power,
+                    electric bills, etc), log files, etc may all be considered
+                    in analysis.  The community volunteer team will fact check
+                    submissions and may ask further questions.
+                </p>
+                 <ul class="mt-3">
+                     <li class="my-3">
+                        Telegram username is required to submit claim
+                    </li>
+                    <li class="my-3">
+                        Please describe your situation in <i>comment</i> section and
+                        attach proper screenshots
+                    </li>
+                 </ul>
+            </div>
+        </div>
+    </div>
+</div>
+

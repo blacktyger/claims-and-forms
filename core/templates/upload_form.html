@@ -1,0 +1,25 @@
+{% load static %}
+<head>
+    <link href="{% static 'assets/dropzone/dropzone.css' %}" rel="stylesheet" />
+</head>
+
+<div class="mt-5 text-start">
+    <p class="fs-4 mb-0">
+        <i class="fs-2 fas fa-file-image text-primary"></i>
+        <strong>Upload Files</strong>
+    </p>
+    <div class="mb-2 mt-0">
+        <span class="text-dark"> Upload up to 5 files, maximum 2MB each</span>
+</div>
+</div>
+<form action="{% url 'upload' %}" method="post" id="epic_dropzone"
+      class="dropzone epic-dropzone" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="fallback">
+        <input name="file" type="file" multiple />
+    </div>
+</form>
+
+<script src="{% static 'assets/dropzone/dropzone.js' %}"></script>
+
+

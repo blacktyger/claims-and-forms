@@ -1,0 +1,97 @@
+{% extends 'base.html' %} {% load static %}
+
+{% block content %}
+
+<style>
+    .claim_id:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+</style>
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col-lg-6 col-md-10 col-sm-12">
+            <div class="main_app card px-3 mb-4">
+                <div class="text-center">
+                    <h1 class="card-title py-3">Epicenter IOU Claim Form</h1>
+                    <hr />
+
+                    <div class="mb-4">
+                        {% include 'eiou_claim_types.html' %}
+                    </div>
+
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-sm-10">
+
+                            <form method="post" class="form-control"
+                                  action="{% url 'eiou_claim' %}" id="eiou_claim"
+                                  style="background-color: transparent!important;
+                                  border: none!important;">
+
+                                {% csrf_token %}
+
+                                {% include 'contact_form.html' %}
+
+                                {% include 'vitex_form.html' %}
+
+                                <div class="mt-5 text-start">
+                                    <p class="fs-4">
+                                        <i class="fs-2 fas fa-comments text-primary"></i>
+                                        <strong>Comments</strong>
+                                    </p>
+                                </div>
+                                <div class="form-floating mt-2">
+                                    <textarea class="form-control" name="details"
+                                              placeholder="Comments and details" id="details"
+                                              style="height: 195px"></textarea>
+                                    <label for="details">
+                                        Detailed description of your Vitex and/or Mining activity
+                                        between 12 - 20 March 2021
+                                    </label>
+                                </div>
+                            </form>
+
+                            <div class="px-3">
+                                {% include 'upload_form.html' %}
+                            </div>
+
+                            <div class="px-3 my-3">
+                                <button id="submit_claim_button" class="btn btn-success w-100 my-4" onclick="submitForm()">
+                                    <h4>Submit Form</h4>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <small>
+                                <span>Your claim ID: </span>
+                                <span class="claim_id" id="claim_id" data-bs-toggle="tooltip"
+                                      data-bs-placement="top" title="Copy to clipboard"
+                                      onclick="copyToClipboard('#claim_id')">
+                                    {{claim_id}}
+                                </span>
+                            </small>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <hr />
+                        <div class="footer-text text-center mx-2">
+                            <a href="https://t.me/epiccashhelpdesk" target="_blank">
+                                Telegram Help Desk.
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block js %}
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+<script src="{% static 'assets/java.js' %}"></script>
+{% endblock js %}
+
+
+
