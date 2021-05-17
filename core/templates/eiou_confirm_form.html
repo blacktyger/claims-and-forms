@@ -80,8 +80,6 @@
                     {% if claim.estimations %}
                         <div class="h4 my-5">
                             {% if claim.estimations.total_claim_value %}
-                            <span class="mt-4 text-muted"><small>Based on Vitex activity</small></span>
-                                <br /><br />
                                 Estimated EIOU claim:
                                 <span class="fw-bold">
                                     {{claim.estimations.total_claim_value|intcomma}} $
