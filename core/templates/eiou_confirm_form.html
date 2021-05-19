@@ -82,8 +82,12 @@
                             {% if claim.estimations.total_claim_value %}
                                 Estimated EIOU claim:
                                 <span class="fw-bold">
-                                    {{claim.estimations.total_claim_value|intcomma}} $
+                                    {{claim.estimations.total_claim_value|intcomma}} $*
                                 </span>
+                            <p class="font-dark mt-3 px-3 fs-6">
+                                * This is only estimated value based on data provided by Vitex exchange,
+                                it is not guaranteed and will be validated by Epic-Cash team.
+                            </p>
                             {% else %}
                                 <span class="fw-bold">
                                     No Vitex activity after 12 March
@@ -100,11 +104,12 @@
                         </div>
                     {% endif %}
 
-                    <div class="h5 mt-5 mb-4">
-                        (todo)<br />
-                        Short notification about getting in touch with
-                        users, possible reason why value will be different,
-                        and other details, maybe some useful links
+                    <div class="h5 mt-3 mb-4">
+                        <p>Thank you for getting in touch!</p>
+                        <p class="px-3">
+                            Epic-Cash team will contact you via Telegram with further details.
+                        </p>
+
                     </div>
 
                      <a href="{% url 'home' %}" class="btn btn-primary mb-3 py-2 w-100" type="button">

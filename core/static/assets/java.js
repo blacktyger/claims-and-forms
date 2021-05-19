@@ -4,7 +4,7 @@ var vitex_msg = $("#msg_vitex_check_handler")
 var submit_button = $("#submit_claim_button")
 
 $("#vitex_address").on("input", function() {
-    var address = $(this).val().trim()
+    var address = $(this).val().trim();
     if (address.length === 55) {
         submit_button.prop("disabled", true);
         vitex_icon.html(
@@ -20,7 +20,7 @@ $("#vitex_address").on("input", function() {
             height: 1rem;
             border-width: .2em;"
             class="spinner-border spinner-border-sm ml-3" role="status" aria-hidden="true"></span>`
-       )
+       );
     }
 
    $.ajax({
