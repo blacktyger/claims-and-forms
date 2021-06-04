@@ -77,7 +77,6 @@ class EIOUClaimView(generic.TemplateView):
             request.session['active_claim'] = str(claim.id)
         else:
             claim, created = Claim.objects.get_or_create(id=request.session['active_claim'])
-            request.session['active_claim'] = str(claim.id)
 
         context = self.get_context_data(claim_id=claim.id)
         response = render(request, self.template_name, context)

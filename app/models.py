@@ -18,7 +18,7 @@ class Claim(models.Model):
     estimations = jsonfield.JSONField(default={})
     timestamp = models.DateTimeField(auto_now_add=True)
     team_comments = models.TextField(default='', blank=True, null=True)
-    files = models.ManyToManyField('ClaimFile', related_name='claim')
+    files = models.ManyToManyField('ClaimFile', related_name='claim', blank=True, null=True)
 
     class Meta:
         ordering = ['-timestamp']
