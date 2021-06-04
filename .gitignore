@@ -8,6 +8,7 @@ __pycache__/
 secrets.py
 # Distribution / packaging
 .Python
+.idea/
 media/
 build/
 develop-eggs/
