@@ -3836,5 +3836,5 @@ const EpicDropzone = new Dropzone('#epic_dropzone', {
     url: "/upload/",
     maxFiles: 5,
     maxFilesize: 2,
-    acceptedFiles: '.png, .jpg, .pdf, .svg'
+    acceptedFiles: '.png, .jpg, .pdf, .svg, .csv'
 })

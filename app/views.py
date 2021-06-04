@@ -76,7 +76,7 @@ class EIOUClaimView(generic.TemplateView):
             # TODO: remove this from session after successful submission
             request.session['active_claim'] = str(claim.id)
         else:
-            claim = Claim.objects.get(id=request.session['active_claim'])
+            claim, created = Claim.objects.get_or_create(id=request.session['active_claim'])
 
         context = self.get_context_data(claim_id=claim.id)
         response = render(request, self.template_name, context)
